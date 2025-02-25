@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,100..900;1,100..900&display=swap');
+/* font-family: "Petrona", serif; */
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Typography */
+html {
+    /* root fontSize of 10px */
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Petrona", serif;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+    margin: 1rem 0;
+}
+
+h1 {
+    font-size: 3.6rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.75rem 1.7rem;
+    text-transform: uppercase;
+    height: 37.5px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: "Petrona", serif;
+    outline: 0;
+    border: 2px solid #000;
+    background: none;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    display: inline-block;
+}
+
+.btn--outline {
+    border: 2px solid #09072C;
+    color: #09072C;
+    background: #fff;
+    transition: all .3s;
+}
+
+.btn--black {
+    background: #09072C;
+    color: aliceblue;
+    transition: all .3s;
+}
+
+.btn--black:hover {
+    background: none;
+    color: #09072C;
+    border: 2px solid #09072C;
+}
+
+.btn--outline:hover {
+    background: #09072C;
+    color: aliceblue;
+}
+
+/* Blocks */
+.block {
+    padding: 5rem 2rem;
+}
+
+.container--lg {
+    max-width: 1024px;
+}
+
+.container--md {
+    max-width: 768px;
+}
+
+/* Grids */
+.grid {
+    display: grid;
+    gap: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .grid--1x2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .grid--1x3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* List */
+.list {
+    list-style: none;
+    padding-left: 2rem;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2.5rem;
+    flex-wrap: wrap;
+    color: aliceblue;
+}
+
+.nav__brand {
+    display: flex;
+    align-items: center;
+}
+
+.nav__logo {
+    margin-left: -20px;
+}
+
+.nav__name {
+    margin-left: -5px;
+}
+
+.nav__tog .svg {
+    fill: #fff;
+    opacity: .5;
+}
+
+.collapse .nav__tog .svg {
+    opacity: 1;
+}
+
+.nav__list {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    width: 100%;
+    height: 100vh;
+    transition: all .5s ease-out;
+}
+
+.nav__item {
+    padding: 2.5rem 0 1rem;
+    text-align: center;
+    font-size: 2rem;
+    border-bottom: 1px solid aliceblue;
+}
+
+.nav__item>a {
+    text-decoration: none;
+    color: aliceblue;
+    opacity: .5;
+    transition: color .3s;
+}
+
+.nav__item>a:hover {
+    opacity: 1;
+}
+
+.nav__item:last-of-type {
+    border-bottom: 0;
+}
+
+.nav.collapse .nav__list {
+    max-height: 100%;
+    overflow: visible;
+    opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+    .nav__tog {
+        display: none;
+    }
+
+    .nav__list {
+        width: auto;
+        max-height: 100%;
+        height: auto;
+        overflow: visible;
+        opacity: 1;
+        display: flex;
+        gap: 2rem;
+    }
+
+    .nav__item {
+        border: 0;
+    }
+}
+
+/* Images */
+.img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Cards */
+.card {
+    background: #fff;
+    box-shadow: 0 0 30px 5px #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    transition: all .5s;
+}
+
+.card__content {
+    text-align: center;
+}
+
+/* Swippers */
+.swiper {
+    width: 100%;
+}
+
+.swiper-des {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Header */
+header {
+    background: #09072c;
+}
+
+/* Hero */
+.hero {
+    display: flex;
+    background: #09072ca4;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.hero__heading {
+    text-align: center;
+}
+
+/* About */
+.about {
+    display: flex;
+    justify-content: center;
+}
+
+.about__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #09072c;
+}
+
+.about__article {
+    padding: 1rem;
+    margin: 10px 0;
+    line-height: 2;
+    letter-spacing: 1px;
+    font-size: 1.8rem;
+}
+
+.about__article h4 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Services */
+.service {
+    display: flex;
+    justify-content: center;
+    background: #09072ca4;
+}
+
+.service__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #09072c;
+}
+
+.service__headings {
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.service .grid {
+    gap: 50px 30px;
+}
+
+@media screen and (min-width: 1024px) {
+    .service .card:hover {
+        transform: scale(1.05);
+    }
+}
+
+/* Testimonials */
+.testimonial {
+    display: flex;
+    justify-content: center;
+}
+
+.testimonial__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #09072c;
+}
+
+.testimonial__headings {
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+/* Footer/Contacts */
+.contact {
+    color: #fff;
+    background: #09072ca4;
+    padding-right:10rem;
+    padding-left:10rem;
+}
+
+.contact__subscribe {
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+}
+
+.contact__write h3 {
+    margin-bottom: -6px;
+}
+
+.contact__input input {
+    padding: 0.75rem 1.5rem;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.contact__input .btn {
+    width: 100%;
+}
+
+.contact__input .contact__privacy {
+    margin-top: 3px;
+    font-size: 0.9rem;
+}
+
+.contact__follow {
+    margin-bottom: 5rem;
+}
+
+.contact__follow h3 {
+    color: #09072C;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.contact__socials p {
+    margin: 1rem 0;
+}
+
+.contact__socials a {
+    text-decoration: none;
+    color: #fff;
+    transition: all .3s;
+}
+
+.contact__socials a:hover {
+    color: #09072C;
+    transform: scale(1.2);
+}
+
+/* footer closing */
+.closing {
+    background: #09072C;
+    color: #fff;
+    padding: 1rem;
+}
+
+.closing__brand {
+    font-size: 0.7rem;
+}
+
+.closing__logo {
+    text-decoration: none;
+    color: #fff;
+    line-height: 1.1;
+    font-style: italic;
+}
+
+
+
+@media screen and (min-width: 768px){
+    .contact__subscribe{
+        display: flex;
+        justify-content: space-between;
+    }
+    .contact__input-align {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+    .contact__input-align input{
+        flex-grow:  1;
+    }
+
+    .contact__input-align .btn{
+        width: auto;
+    }
+
+    .contact__follow {
+        display: flex;
+        justify-content: space-between;
+    }
+
+   .contact__socials {
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+   }
+
+   .closing {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+   }
+
+   .contact{
+    display: flex;
+    flex-direction: column;
+   }
+}
