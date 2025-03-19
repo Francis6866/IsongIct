@@ -16,10 +16,17 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
+/* body {
     font-family: "Petrona", serif;
     font-size: 1.5rem;
     line-height: 1.5;
+} */
+body {
+    font-family: "Petrona", serif, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 h1,
@@ -41,8 +48,21 @@ h3 {
 }
 
 /* Buttons */
+/* .btn {
+    background: #ffcc80;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+} */
+
+.btn:hover {
+    background: #ffb74d;
+}
+
 .btn {
-    padding: 0.75rem 1.7rem;
+    padding: 10px 20px;
     text-transform: uppercase;
     height: 37.5px;
     font-weight: bold;
@@ -50,11 +70,12 @@ h3 {
     font-family: "Petrona", serif;
     outline: 0;
     border: 2px solid #000;
-    background: none;
+    background: #ffcc80;
     text-decoration: none;
     cursor: pointer;
     color: black;
     display: inline-block;
+    transition: background-color 0.3s;
 }
 
 .btn--outline {
@@ -120,13 +141,48 @@ h3 {
 
 /* Navigation */
 .nav {
+    /* background: #1a237e; */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #fff;
+}
+
+.nav__list {
+    /* display: flex; */
+    list-style: none;
+    gap: 20px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    width: 100%;
+    height: 100vh;
+    transition: all .5s ease-out;
+}
+
+.nav__item a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav__item a:hover {
+    color: #ffcc80;
+}
+
+
+/* Main */
+/* .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 2.5rem;
     flex-wrap: wrap;
     color: aliceblue;
-}
+} */
 
 .nav__brand {
     display: flex;
@@ -139,6 +195,7 @@ h3 {
 
 .nav__name {
     margin-left: -5px;
+    font-size: 2rem;
 }
 
 .nav__tog .svg {
@@ -150,14 +207,14 @@ h3 {
     opacity: 1;
 }
 
-.nav__list {
+/* .nav__list {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
     width: 100%;
     height: 100vh;
     transition: all .5s ease-out;
-}
+} */
 
 .nav__item {
     padding: 2.5rem 0 1rem;
@@ -166,7 +223,7 @@ h3 {
     border-bottom: 1px solid aliceblue;
 }
 
-.nav__item>a {
+/* .nav__item>a {
     text-decoration: none;
     color: aliceblue;
     opacity: .5;
@@ -175,7 +232,7 @@ h3 {
 
 .nav__item>a:hover {
     opacity: 1;
-}
+} */
 
 .nav__item:last-of-type {
     border-bottom: 0;
@@ -216,7 +273,7 @@ h3 {
 /* Cards */
 .card {
     background: #fff;
-    box-shadow: 0 0 30px 5px #ccc;
+    box-shadow: 0 0 5px #ccc;
     border-radius: 5px;
     padding: 20px;
     transition: all .5s;
@@ -241,16 +298,25 @@ h3 {
 /* Header */
 header {
     background: #09072c;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 20;
 }
 
 /* Hero */
 .hero {
     display: flex;
-    background: #09072ca4;
+    margin-top: 60px;
+    padding-top: 80px;
+    /* background: #09072ca4; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #fff;
+    text-align: center;
+    padding: 5rem 2rem;
+    background: linear-gradient(to right, #1a237e, #3949ab);
 }
 
 .hero__heading {
@@ -259,6 +325,7 @@ header {
 
 /* About */
 .about {
+    padding-top: 80px;
     display: flex;
     justify-content: center;
 }
@@ -286,9 +353,12 @@ header {
 
 /* Services */
 .service {
+    padding-top: 80px;
     display: flex;
     justify-content: center;
-    background: #09072ca4;
+    color: #fff;
+    /* background: #09072ca4; */
+    background: linear-gradient(to right, #1a237e, #3949ab);
 }
 
 .service__container {
@@ -296,6 +366,10 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* color: #09072c; */
+}
+
+.service .card{
     color: #09072c;
 }
 
@@ -316,6 +390,7 @@ header {
 
 /* Testimonials */
 .testimonial {
+    padding-top: 80px;
     display: flex;
     justify-content: center;
 }
