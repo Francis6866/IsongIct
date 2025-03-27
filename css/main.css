@@ -275,12 +275,14 @@ h3 {
     background: #fff;
     box-shadow: 0 0 5px #ccc;
     border-radius: 5px;
-    padding: 20px;
+    overflow: hidden;
+    /* padding: 20px; */
     transition: all .5s;
 }
 
 .card__content {
     text-align: center;
+    padding: 20px 0;
 }
 
 /* Swippers */
@@ -293,6 +295,11 @@ h3 {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+}
+
+.swiper-content img {
+    border-radius: 10px;
+
 }
 
 /* Header */
@@ -351,6 +358,10 @@ header {
     text-align: center;
 }
 
+.about__article p {
+    text-align: justify;
+}
+
 /* Services */
 .service {
     padding-top: 80px;
@@ -395,6 +406,7 @@ header {
     justify-content: center;
 }
 
+
 .testimonial__container {
     display: flex;
     flex-direction: column;
@@ -406,6 +418,30 @@ header {
 .testimonial__headings {
     margin-bottom: 70px;
     text-align: center;
+}
+
+.testimonial__headings p {
+    font-size: 1.5rem;
+}
+
+.testimonial .card__content p {
+    text-align: left;
+    padding: 0 10px;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+/* .testimonial .card img {
+    object-fit: cover;
+} */
+
+
+/* .testimonial .card__content {
+    text-align: left;
+} */
+
+@media screen and (min-width: 768px){
+    
 }
 
 /* Footer/Contacts */
@@ -481,6 +517,37 @@ header {
     color: #fff;
     line-height: 1.1;
     font-style: italic;
+}
+
+.dev {
+    position: relative;
+    display: flex;
+}
+
+.dev__img {
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.dev .two {
+    position: relative;
+    left: -10px;
+    z-index: 5;
+}
+
+.dev .three {
+    position: relative;
+    left: -20px;
+    z-index: 10;
+}
+
+.team p {
+    font-style: italic;
+    padding: 5px;
+    font-size: 2rem;
 }
 
 
