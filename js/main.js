@@ -1,48 +1,87 @@
-'use strict';
+document.addEventListener("DOMContentLoaded", () => {
+  // Initialize Swiper
+  const swiper = new Swiper(".swiper", {
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  })
 
-// const swiper = new Swiper('.swiper', {
-//     autoplay: {
-//         delay: 5000,
-//         disableOnInteraction: false
-//     },
-//     loop: true,
+  // Navigation toggle
+  const navToggler = document.querySelector(".nav__tog")
+  const navList = document.querySelector(".nav__list")
 
-//     // If we need pagination
-//     // pagination: {
-//     //     el: '.swiper-pagination',
-//     // },
+  navToggler.addEventListener("click", () => {
+    navList.classList.toggle("active")
+    document.body.classList.toggle("no-scroll")
+  })
 
-//     // Navigation arrows
-//     navigation: {
-//         nextEl: '.swiper-button-next',
-//         prevEl: '.swiper-button-prev',
-//     },
+  // Close mobile menu on link click
+  const navLinks = document.querySelectorAll(".nav__link")
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      navList.classList.remove("active")
+      document.body.classList.remove("no-scroll")
+    })
+  })
 
+  // Remove header scroll effect since navbar is now static
+  // const header = document.querySelector(".header")
+  // window.addEventListener("scroll", () => {
+  //   if (window.scrollY > 50) {
+  //     header.classList.add("scrolled")
+  //   } else {
+  //     header.classList.remove("scrolled")
+  //   }
+  // })
 
-// });
-
-document.addEventListener("DOMContentLoaded", function () {
-    const swiper = new Swiper(".swiper", {
-        autoplay: { delay: 4000 },
-        loop: true,
-        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-    });
-
-    // nav toggler
-    const nav = document.querySelector('.nav')
-    const toggler = document.querySelector('.nav__tog')
-
-    function showMenu() {
-    nav.classList.toggle('collapse')
+  // Back to top button
+  const backToTopButton = document.querySelector(".back-to-top")
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      backToTopButton.classList.add("active")
+    } else {
+      backToTopButton.classList.remove("active")
     }
+  })
 
-    toggler.addEventListener('click', showMenu)
+  backToTopButton.addEventListener("click", (e) => {
+    e.preventDefault()
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    })
+  })
 
-     // Close mobile menu on link click
-     const navLinks = document.querySelectorAll(".nav__link");
-     navLinks.forEach(link => {
-         link.addEventListener("click", () => {
-             nav.classList.toggle("collapse");
-         });
-        })
-});
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      if (this.getAttribute("href") !== "#") {
+        e.preventDefault()
+
+        const targetId = this.getAttribute("href")
+        const targetElement = document.querySelector(targetId)
+
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: "smooth",
+          })
+        }
+      }
+    })
+  })
+})

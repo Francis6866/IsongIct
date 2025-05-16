@@ -5,94 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isong Technologies</title>
     <link rel="stylesheet" href="css/main.css">
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav class="nav">
+    <header class="header">
+        <nav class="nav container">
             <div class="nav__brand">
-                <a href="#" class="nav__logo">
-                    <img src="assets/images/logo.jpg" alt="" class="img" width="50px"
-                    height="50px">
-                </a>
-                <h4 class="nav__name">ISONG <br> TECHNOLOGIES</h4>
-            </div>
-            <div class="nav__tog">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1)"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" class="svg"></path></svg>
+    <a href="#" class="nav__logo">
+        <img src="assets/images/logo.jpg" alt="Isong Technologies Logo" class="img" width="40px" height="40px">
+    </a>
+    <div class="nav__name">ISONG <br> TECHNOLOGIES</div>
+</div>
+            <div class="nav__tog" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
             </div>
             <ul class="list nav__list">
                 <li class="nav__item"><a class="nav__link" href="#about">About</a></li>
                 <li class="nav__item"><a class="nav__link" href="#services">Services</a></li>
-                <li class="nav__item"><a class="nav__link" href="#testimonial">Testimonials/Spotlight</a></li>
-                <li class="nav__item"><a class="nav__link" href="#footer">Contact</a></li>
+                <li class="nav__item"><a class="nav__link" href="#testimonial">Testimonials</a></li>
+                <li class="nav__item"><a class="nav__link" href="#projects">Projects</a></li>
+                <li class="nav__item"><a class="nav__link btn btn--outline nav-btn" href="#footer">Contact</a></li>
             </ul>
-           </nav>
+        </nav>
     </header>
 
     <!-- Hero section -->
     <section class="block hero" id="hero">
-        <div class="grid"><!-- container--md -->
-            <h1 class="hero__heading">Innovative Solutions in Tech Development and Consultancy</h1>
+        <div class="container">
+            <div class="hero__content">
+                <h1 class="hero__heading">Innovative Solutions in Tech Development and Consultancy</h1>
+                <p class="hero__subheading">Transforming ideas into digital realities with cutting-edge technology</p>
+            </div>
             <div class="swiper">
-                <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
-                  <!-- Slides -->
-                  <div class="swiper-slide">
-                    <div class="swiper-content">
-                        <img src="assets/images/consultant.jpg" alt="" class="img" width="500px" height="500px">
-                        <div class="swiper-des">
-                            <h3>Web Development</h3>
-                            <div>
-                                <a href="#services"  class="btn btn--outline">Learn More</a>
+                    <div class="swiper-slide">
+                        <div class="swiper-content">
+                            <img src="assets/images/consultant.jpg" alt="Web Development" class="img" width="500px" height="500px">
+                            <div class="swiper-des">
+                                <h3>Web Development</h3>
+                                <div>
+                                    <a href="#services" class="btn btn--outline">Learn More</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                  </div>
 
-                  <div class="swiper-slide">
-                    <div class="swiper-content">
-                    <img src="assets/images/mobile.jpg" alt=""    class="img"  width="500px" height="500px">
-                    <div class="swiper-des">
-                    <h3>Mobile App Development</h3>
-                    <div>
-                        <a href="#services"  class="btn btn--outline">Learn More</a>
-                     </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-content">
+                            <img src="assets/images/mobile.jpg" alt="Mobile App Development" class="img" width="500px" height="500px">
+                            <div class="swiper-des">
+                                <h3>Mobile App Development</h3>
+                                <div>
+                                    <a href="#services" class="btn btn--outline">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    </div>
-                </div><!-- second -->
 
-                  <div class="swiper-slide">
-                    <div class="swiper-content">
-                <img src="assets/images/webDev.jpg" alt="" class="img"  width="500px" height="500px">
-                    <div class="swiper-des">
+                    <div class="swiper-slide">
+                        <div class="swiper-content">
+                            <img src="assets/images/webDev.jpg" alt="ICT Consultancy" class="img" width="500px" height="500px">
+                            <div class="swiper-des">
                                 <h3>ICT Consultancy</h3>
-                    <div>
-                        <a href="#services"  class="btn btn--outline">Learn More</a>
+                                <div>
+                                    <a href="#services" class="btn btn--outline">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                </div>
-             </div><!-- third -->
-
-                </div>
-                <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
-              
-                <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
-              </div>
+            </div>
         </div>
     </section>
 
     <!-- About -->
     <section class="about block" id="about">
-        <div class="container--lg about__container">
-            <h2>About Us</h2>
+        <div class="container about__container">
+            <div class="section-header">
+                <h2>About Us</h2>
+                <div class="section-divider"></div>
+            </div>
             <div class="grid grid--1x2">
-                <!-- sections -->
                 <article class="about__article story">
                     <div class="about__shadow">
                         <h4>Our Story</h4>
@@ -101,7 +98,7 @@
                 </article>
 
                 <article class="about__article path">
-                    <div  class="about__shadow">
+                    <div class="about__shadow">
                         <h4>Our Pathway</h4>
                         <p>At Isong Technologies, we embrace a forward-thinking approach to innovation. Our journey is fueled by research, collaboration and a knack for solving real-world challenges through technology. We prioritize continuous learning and strategic partnerships, ensuring that our solutions remain at the forefront of emerging technologies. By nurturing young minds and equipping them with industry-ready skills, we are building a tech-driven ecosystem that fosters creativity, resilience and impact.</p>
                     </div>
@@ -126,138 +123,158 @@
 
     <!-- Services -->
     <section id="services" class="block service">
-       <div class="container--lg service__container">
-        <div class="service__headings">
-            <h2>Our Services</h2>
-            <h3>Comprehensive Solutions for Your Digital Needs</h3>
-            <p>At Isong ICT, we specialize in transforming ideas into digital realities. Our expert team is dedicated to delivering innovative technology solutions tailored to your business.</p>
-        </div>
-        <div class="grid grid--1x2 grid--1x3">
-            <div class="card">
-                <div class="grid">
-                    <img src="assets/images/mobile.jpg" alt="placeholder" class="img" width="500px" height="300px">
-                    <div class="card__content">
-                        <h3>Mobile App Development That Engages Users</h3>
+        <div class="container service__container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <div class="section-divider"></div>
+                <h3>Comprehensive Solutions for Your Digital Needs</h3>
+                <p>At Isong Technologies, we specialize in transforming ideas into digital realities. Our expert team is dedicated to delivering innovative technology solutions tailored to your business.</p>
+            </div>
+            <div class="grid grid--1x3">
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <img src="assets/images/mobile.jpg" alt="Mobile App Development" class="img service-card__img">
+                    <div class="service-card__content">
+                        <h3>Mobile App Development</h3>
                         <p>We create user-friendly mobile applications that enhance customer engagement and drive business growth.</p>
+                        <a href="#" class="service-card__link">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-            </div><!-- Cards -->
 
-            <div class="card">
-                <div class="grid">
-                    <img src="assets/images/webDev.jpg" alt="placeholder" class="img" width="500px" height="300px">
-                    <div class="card__content">
-                        <h3>Web Development for a Strong Online Presence</h3>
-                        <p>Our web development services ensure your brand stands out in the digital landscape.</p>
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <img src="assets/images/webDev.jpg" alt="Web Development" class="img service-card__img">
+                    <div class="service-card__content">
+                        <h3>Web Development</h3>
+                        <p>Our web development services ensure your brand stands out in the digital landscape with responsive, modern designs.</p>
+                        <a href="#" class="service-card__link">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-            </div><!-- Cards -->
-            <div class="card">
-                <div class="grid">
-                    <img src="assets/images/consultant.jpg" alt="placeholder" class="img" width="500px" height="300px">
-                    <div class="card__content">
-                        <h3>Expert ICT Consultancy to Drive Success</h3>
-                        <p>We offer strategic ICT consultancy to optimize your operations and enhance efficiency.</p>
+
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <img src="assets/images/consultant.jpg" alt="ICT Consultancy" class="img service-card__img">
+                    <div class="service-card__content">
+                        <h3>ICT Consultancy</h3>
+                        <p>We offer strategic ICT consultancy to optimize your operations and enhance efficiency in the digital age.</p>
+                        <a href="#" class="service-card__link">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-            </div><!-- Cards -->
-
-
+            </div>
         </div>
-       </div>
     </section>
 
     <!-- Testimonials -->
     <section id="testimonial" class="block testimonial">
-        <div class="container--lg testimonial__container">
-            <div class="testimonial__headings">
-                <h2>Celebrating Our Internship Fellows: Inspiring Journeys and Achievements at Isong ICT</h2>
-                <p>At Isong ICT, our internship fellows are the heart of our innovation. Their remarkable contributions and personal growth stories inspire us all, showcasing the transformative power of hands-on experience in the tech industry.</p>
+        <div class="container testimonial__container">
+            <div class="section-header">
+                <h2>Celebrating Our Internship Fellows</h2>
+                <div class="section-divider"></div>
+                <p>At Isong Technologies, our internship fellows are the heart of our innovation. Their remarkable contributions and personal growth stories inspire us all, showcasing the transformative power of hands-on experience in the tech industry.</p>
             </div>
 
-            <div class="grid grid--1x3">
-                <div class="card">
-                    <div class="grid">
-                        <img src="assets/images/inno-real.jpg" alt="placeholder" class="img" height="400px">
-                        <div class="card__content">
-                            <p>I'm thrilled to have won an E-tablet through the Orientation Challenge Competition in the 3MTT program. I'm grateful to 3MTT for this wonderful opportunity, to PSP Analytics for fostering a supportive learning environment, and to Isong Technologies for helping me sharpen my skills. This E-tablet has truly enhanced my learning journey and opened up new possibilities for personal and professional growth. I'm excited about the future and thankful to everyone who contributed to this experience. Your encouragement and mentorship have made a meaningful difference in my development. — Emeng, Innocent Enang (Intern at Isong Technologies).</p>
+            <div class="testimonial-slider">
+                <div class="grid grid--1x3">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__image">
+                            <img src="assets/images/inno-real.jpg" alt="Emeng, Innocent Enang" class="img">
+                        </div>
+                        <div class="testimonial-card__content">
+                            <div class="testimonial-card__quote">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>I'm thrilled to have won an E-tablet through the Orientation Challenge Competition in the 3MTT program. I'm grateful to 3MTT for this wonderful opportunity, to PSP Analytics for fostering a supportive learning environment, and to Isong Technologies for helping me sharpen my skills.</p>
+                            <div class="testimonial-card__author">
+                                <h4>Emeng, Innocent Enang</h4>
+                                <p>Intern at Isong Technologies</p>
+                            </div>
                         </div>
                     </div>
-                </div> <!-- first testimonial card -->
 
-
-                <div class="card">
-                    <div class="grid">
-                            <img src="assets/images/temple-real.jpg" alt="fellow testimonial image" class="img" height="400px">
-                        <div class="card__content">
-                            <p>I'm truly grateful to NJFP, 3MTT, and my host organization, Isong Technologies, for empowering me to grow technologically. When I discovered 3MTT's monthly knowledge showcases and the chance to win exciting prizes like PCs, E-tabs, and routers, I was inspired to participate. After several attempts, I finally won a system, and I'm thankful to God for this achievement. My sincere appreciation goes to NJFP and 3MTT for this opportunity, and to Isong Technologies for their constant support. Special thanks to Sir Akodi Peterson — your mentorship has made a lasting impact on my journey.</p>
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__image">
+                            <img src="assets/images/temple-real.jpg" alt="Temple" class="img">
+                        </div>
+                        <div class="testimonial-card__content">
+                            <div class="testimonial-card__quote">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>I'm truly grateful to NJFP, 3MTT, and my host organization, Isong Technologies, for empowering me to grow technologically. After several attempts, I finally won a system, and I'm thankful to God for this achievement.</p>
+                            <div class="testimonial-card__author">
+                                <h4>Temple</h4>
+                                <p>NJFP Fellow</p>
+                            </div>
                         </div>
                     </div>
-                </div> <!-- 2nd -->
 
-
-                <div class="card">
-                    <div class="grid">
-                        <img src="assets/images/yina-real.jpg" alt="placeholder" class="img" height="400px">
-                        <div class="card__content">
-                            <p>Participating in the 3MTT Regional Hackathon was a remarkable experience for our team from Isong ICT. Competing alongside some of the region's brightest talents challenged us to think creatively, collaborate effectively, and stretch our skills beyond limits. Winning the grand prize was an incredible honor, but the true reward was the knowledge gained, friendships formed, and the unwavering support from our Isong Technologies family. Their mentorship and encouragement fueled our success. This achievement has strengthened our passion for tech innovation, and we're excited to keep building impactful solutions for our community and beyond.</p>
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__image">
+                            <img src="assets/images/yina-real.jpg" alt="Yina" class="img">
+                        </div>
+                        <div class="testimonial-card__content">
+                            <div class="testimonial-card__quote">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>Participating in the 3MTT Regional Hackathon was a remarkable experience for our team from Isong Technologies. Winning the grand prize was an incredible honor, but the true reward was the knowledge gained and friendships formed.</p>
+                            <div class="testimonial-card__author">
+                                <h4>Yina</h4>
+                                <p>3MTT Participant</p>
+                            </div>
                         </div>
                     </div>
-                </div> <!-- 3rd -->
-
+                </div>
             </div>
         </div>
     </section>
 
     <!-- fellows project -->
     <section id="projects" class="block project">
-        <div class="container--lg project__container">
-            <div class="project__headings">
-                <h2>Game-Changing Projects by Our Visionary Fellows</h2>
+        <div class="container project__container">
+            <div class="section-header">
+                <h2>Game-Changing Projects</h2>
+                <div class="section-divider"></div>
                 <p>Discover the groundbreaking work of our fellows—innovative designs and technologies shaping the future.</p>
             </div>
 
             <div class="grid grid--1x3">
-                <div class="card">
-                    <div class="grid project-card">
-                        <div>
-                            <h2 class="project__card-header">TaskMaster To-Do App</h2>
-                            <p class="project__card-des">TaskMaster To-Do App is a simple and secure task manager that lets users register, log in, and organize their daily tasks. Built with React, Node.js, and MongoDB, it ensures each user's data remains private.</p>
-                        </div>
-
-                        <div>
-                            <p>Try it out with our live link: <a href="https://taskmaster-todo-app-gold.vercel.app/" target="_blank">TaskMaster To-Do App</a></p>
-                        </div>
+                <div class="project-card">
+                    <div class="project-card__icon">
+                        <i class="fas fa-tasks"></i>
                     </div>
-                </div> <!-- first project card -->
-
-                <div class="card">
-                    <div class="grid project-card">
-                        <div>
-                            <h2 class="project__card-header">Phishing Detector</h2>
-                            <p class="project__card-des">This extension scans every website you visit in real-time, detecting potential security threats, phishing attempts, and malicious content. With its proactive alerts, it ensures a safer online experience, helping users make informed decisions and avoid risky websites for enhanced protection.</p>
-                        </div>
-
-                        <div>
-                            <p>Try it out with our live link: <a href="https://drive.google.com/file/d/1vDvvLO9ld1j8F-zKu7h84gbg_yn_VDeB/view?usp=drivesdk" target="_blank">Phishing Detector</a></p>
-                        </div>
+                    <div class="project-card__content">
+                        <h3>TaskMaster To-Do App</h3>
+                        <p>A simple and secure task manager that lets users register, log in, and organize their daily tasks. Built with React, Node.js, and MongoDB.</p>
+                        <a href="https://taskmaster-todo-app-gold.vercel.app/" target="_blank" class="btn btn--outline">View Project</a>
                     </div>
-                </div><!-- 2nd -->
+                </div>
 
-                <div class="card">
-                    <div class="grid project-card">
-                        <div>
-                            <h2 class="project__card-header">Diabetes Prediction System</h2>
-                            <p class="project__card-des">Our project leverages machine learning to assess an individual's risk of developing diabetes based on key health indicators. The model is currently deployed on a functional website designed to support healthcare providers with predictive insights for early intervention and care planning.
-                            </p>
-                        </div>
-
-                        <div>
-                            <p>Try it out with our live link: <a href="https://diabeteswellnespartners.netlify.app/" target="_blank">Diabetes Prediction 
-                            </a></p>
-                        </div>
+                <div class="project-card">
+                    <div class="project-card__icon">
+                        <i class="fas fa-shield-alt"></i>
                     </div>
-                </div><!-- 3rd -->
+                    <div class="project-card__content">
+                        <h3>Phishing Detector</h3>
+                        <p>This extension scans every website you visit in real-time, detecting potential security threats, phishing attempts, and malicious content.</p>
+                        <a href="https://drive.google.com/file/d/1vDvvLO9ld1j8F-zKu7h84gbg_yn_VDeB/view?usp=drivesdk" target="_blank" class="btn btn--outline">View Project</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-card__icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="project-card__content">
+                        <h3>Diabetes Prediction System</h3>
+                        <p>Our project leverages machine learning to assess an individual's risk of developing diabetes based on key health indicators.</p>
+                        <a href="https://diabeteswellnespartners.netlify.app/" target="_blank" class="btn btn--outline">View Project</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -265,59 +282,87 @@
     <!-- Footer/Contact -->
     <footer id="footer">
         <section id="contact" class="block contact">
-            <div class="">
-                <div class="contact__subscribe">
-                    <div class="contact__write">
-                        <h3>Subscribe to updates</h3>
-                        <p>Stay informed about our latest services and offers.</p>
-                    </div>
-                    <div class="contact__input">
-                        <div class="contact__input-align">
-                            <input type="email" name="emailUs" placeholder="Your email here">
-                            <button class="btn btn--outline">Join</button>
+            <div class="container">
+                <div class="section-header">
+                    <h2>Get In Touch</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="contact__grid">
+                    <div class="contact__subscribe">
+                        <div class="contact__write">
+                            <h3>Subscribe to updates</h3>
+                            <p>Stay informed about our latest services and offers.</p>
                         </div>
-                        <p class="contact__privacy">
-                            By subscribing, you agree to our Privacy Policy.
-                        </p>
+                        <div class="contact__input">
+                            <div class="contact__input-align">
+                                <input type="email" name="emailUs" placeholder="Your email here">
+                                <button class="btn btn--outline">Join</button>
+                            </div>
+                            <p class="contact__privacy">
+                                By subscribing, you agree to our Privacy Policy.
+                            </p>
+                        </div>
                     </div>
-                </div><!-- subscribe section -->
 
-                <div class="contact__follow">
-                    <h3>Follow Us</h3>
-                    <div class="contact__socials">
-                        <p><a href="mailto:connectwithpeterson@gmail.com" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1)"><path d="m18.73 5.41-1.28 1L12 10.46 6.55 6.37l-1.28-1A2 2 0 0 0 2 7.05v11.59A1.36 1.36 0 0 0 3.36 20h3.19v-7.72L12 16.37l5.45-4.09V20h3.19A1.36 1.36 0 0 0 22 18.64V7.05a2 2 0 0 0-3.27-1.64z"></path></svg></a></p>
-
-                        <p><a href="https://x.com/IsongTechWorld" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1)"><path d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"></path></svg></a></p>
+                    <div class="contact__follow">
+                        <h3>Follow Us</h3>
+                        <div class="contact__socials">
+                            <a href="mailto:connectwithpeterson@gmail.com" target="_blank" class="social-icon">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="https://x.com/IsongTechWorld" target="_blank" class="social-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" target="_blank" class="social-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" target="_blank" class="social-icon">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+        
         <div class="closing">
-            <div>
-                <div class="dev">
-                    <div class="dev__img one">
-                        <img src="assets/images/elijah.jpg" alt="Moses Elijah" class="img">
+            <div class="container closing__container">
+                <div class="closing__team">
+                    <div class="dev">
+                        <div class="dev__img one">
+                            <img src="assets/images/elijah.jpg" alt="Moses Elijah" class="img">
+                        </div>
+                        <div class="dev__img two">
+                            <img src="assets/images/odokConfidence.jpg" alt="Odok Confidence" class="img">
+                        </div>
+                        <div class="dev__img three">
+                            <img src="assets/images/jamesOtu.jpg" alt="Boss James Otu" class="img">
+                        </div>
                     </div>
-                    <div class="dev__img two">
-                        <img src="assets/images/odokConfidence.jpg" alt="Odok Confidence" class="img">
-                    </div>
-                    <div class="dev__img three">
-                        <img src="assets/images/jamesOtu.jpg" alt="Boss James Otu" class="img">
+                    <div class="team">
+                        <p>Website Development Team</p>
                     </div>
                 </div>
-                <div class="team">
-                    <p>Website Development Team</p>
+                
+                <div class="closing__brand">
+                    <a href="#" class="closing__logo">
+                        <h2>ISONG<br>TECHNOLOGIES</h2>
+                    </a>
+                </div>
+                
+                <div class="closing__copyright">
+                    <p>&copy; 2025 Isong Technologies. All rights reserved.</p>
                 </div>
             </div>
-            <div class="closing__brand">
-                <a href="#" class="closing__logo">
-                    <h2>ISONG<br>TECHNOLOGIES</h2>
-                </a>
-            </div>
-            <p>&copy; 2025 Isong ICT. All rights reserved.</p>
         </div>
     </footer>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="js/main.js"></script>
+
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
