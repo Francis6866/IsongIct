@@ -1,8 +1,10 @@
+import Swiper from "swiper"
+
 document.addEventListener("DOMContentLoaded", () => {
-  // Initialize Swiper
+  // Initialize Swiper with updated options
   const swiper = new Swiper(".swiper", {
     autoplay: {
-      delay: 4000,
+      delay: 5000,
       disableOnInteraction: false,
     },
     loop: true,
@@ -13,11 +15,14 @@ document.addEventListener("DOMContentLoaded", () => {
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+      dynamicBullets: true,
     },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    speed: 1000,
+    parallax: true,
   })
 
   // Navigation toggle
@@ -83,5 +88,26 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
     })
+  })
+
+  // Add animation to about icons on scroll
+  const aboutIcons = document.querySelectorAll(".about__icon")
+
+  const observerOptions = {
+    threshold: 0.5,
+    rootMargin: "0px",
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.animation = "pulse 1.5s ease"
+        observer.unobserve(entry.target)
+      }
+    })
+  }, observerOptions)
+
+  aboutIcons.forEach((icon) => {
+    observer.observe(icon)
   })
 })
