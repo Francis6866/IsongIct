@@ -228,7 +228,7 @@ p {
 
 .nav__name {
   margin-left: 1rem;
-  font-size: 1.8rem; /* Reduced from 2rem */
+  font-size: 1.2rem; /* Reduced from 2rem */
   line-height: 1.2;
   display: flex;
   flex-direction: column;
@@ -804,8 +804,11 @@ p {
   color: #fff;
   line-height: 1.1;
   font-style: italic;
+ 
   transition: all 0.3s ease;
 }
+
+
 
 .closing__logo:hover {
   color: #ffcc80;
@@ -818,8 +821,8 @@ p {
 
 .dev__img {
   border: 1px solid #ffcc80;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -847,6 +850,7 @@ p {
   padding: 5px;
   font-size: 1.6rem;
   margin-top: 1rem;
+  text-align: center;
 }
 
 .closing__copyright p {
