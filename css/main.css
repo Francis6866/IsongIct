@@ -217,6 +217,7 @@ p {
 .nav__logo {
   display: flex;
   align-items: center;
+  
 }
 
 .nav__logo img {
@@ -241,6 +242,7 @@ p {
   display: block;
   z-index: 1001;
   transition: all 0.3s ease;
+  margin-right: 10px;
 }
 
 .nav__tog:hover {
@@ -251,7 +253,7 @@ p {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 80%;
+  width: 52%;
   height: 100vh;
   background: #09072c;
   display: flex;
@@ -306,6 +308,10 @@ p {
 }
 
 @media screen and (min-width: 992px) {
+  /* .nav_container{
+  padding: 5rem;
+
+} */
   .nav__tog {
     display: none;
   }
@@ -903,7 +909,7 @@ p {
   }
 
   .hero {
-    padding: 12rem 0 6rem;
+    padding: 10rem 0.8rem 6rem;
   }
 
   .swiper-content img {
